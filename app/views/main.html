@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>#{get 'title' /}</title>
+  <meta charset="${_response_encoding}">
+  <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+  <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/imports.css'}">
+  <script src="@{'/public/javascripts/jquery-1.7.2.min.js'}" type="text/javascript"></script>
+  <script src="@{'/public/javascripts/gumby.min.js'}" type="text/javascript"></script>
+</head>
+<body style="background:#ebffef">
+<div class="row">
+  <nav class="pretty navbar clearfix" id="prettynav">
+    <h1 class="logo">
+      <a href="@{Application.index}" style="color:white">everRoom</a>
+    </h1>
+    <ul>
+      <li>
+        <a href="@{Application.about}">About</a>
+      </li>
+      #{if isLogIn}
+      <li>
+        <a href="@{Application.setting}">Setting</a>
+      </li>
+      #{/if}
+      <li>
+        #{if isLogIn}
+        <a href="@{Application.logout}">Logout</a>
+        #{/if}
+        #{else}
+        <a href="@{Application.login}">Login</a>
+        #{/else}
+      <li>
+    </ul>
+  </nav>
+</div>
+<section class="row">
+  #{doLayout /}
+</section>
+<hr/>
+<footer class="row" id="credits">
+  <div class="six columns">
+    <p>Developed by <a href="https://twitter.com/hotchemi" target="blank">@hotchemi</a></p>
+  </div>
+  <div class="six columns">
+    <div class="row">
+      <div class="nine columns">
+        <span style="width:100px">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="everoom.herokuapp.com"
+             data-text="everRoom - youRoomのトピックを､Evernoteに｡ http://everoom.herokuapp.com" data-lang="ja"
+             data-hashtags="everoom">ツイート</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </span>
+        <iframe class="fb-like-button"
+                src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Feveroom.herokuapp.com%2F&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+        <a href="http://b.hatena.ne.jp/entry/everoom.herokuapp.com"
+           class="hatena-bookmark-button"
+           data-hatena-bookmark-title="everRoom - youRoomのトピックを､Evernoteに｡" data-hatena-bookmark-layout="simple-balloon
+           " title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+      </div>
+      <p class="three columns btn secondary small"><a  target="blank" href="http://hotchemi.github.com/youroom4j/">youRoom4J</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

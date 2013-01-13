@@ -1,0 +1,32 @@
+#{extends 'main.html' /}
+#{set title:'About' /}
+
+<h2>About</h2>
+<div>
+  <h4 class="caption">使い方</h4>
+  <p>everRoomの使い方はとても簡単です｡</p>
+  <h5>1. ログイン</h5>
+  <p>右上から<a href="@{Application.login}">ログイン</a>します｡ youRoomの認証画面に飛ぶので｢許可する｣をクリックします｡</p>
+  <img src="@{'/public/images/login.png'}" width="100%" height="100%" alt="Login"/>
+  <h5>2. 基本情報設定</h5>
+  <p>戻ってきた画面で基本情報を入力します｡Evernoteに投稿する<a target="blank" href="http://blog.evernote.com/jp/2010/08/31/1010">
+    アドレス</a>､ノートブック､タグ､タイトルを設定します｡</p>
+  <strong>･ アドレス … Evernoteに投稿するアドレスです｡</strong><br/>
+  <strong>･ ノートブック … 予めEvernoteでノートを作っておく必要があります｡</strong><br/>
+  <strong>･ タグ … 予めEvernoteでタグを作っておく必要があります｡</strong><br/>
+  <strong>･ タイトル … ｢[Date]の履歴｣と書くと｢2012/11/01の履歴｣に変換されます｡</strong><br/>
+  <br/>
+  <img src="@{'/public/images/setting.png'}" width="100%" height="100%" alt="Login"/>
+  <h5>3. 完了</h5>
+  <p>たったこれだけで設定が完了します｡前日分のyouRoomトピックが､自動で保存されるようになりました｡<br/>
+    <strong>※自動配信を止めたい場合は､Settingの｢配信停止｣から配信をストップさせてください｡</strong></p>
+</div>
+<hr/>
+<div>
+  <h4 class="caption">youRoomって？</h4>
+  <iframe src="http://player.vimeo.com/video/40067184?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/40067184">New youRoom</a> from <a href="http://vimeo.com/user11199087">SonicGarden</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+  <h5>youRoom は､｢オンライン･コミュニティ･プラットフォーム｣です｡</h5>
+  <p>友人同士のグループや仕事のプロジェクトなどで､複数の同僚や仲間たちと情報共有したり連絡しあったりすることができます｡<br/>
+    「ルーム」と呼ばれる仮想空間を作り､短いメッセージや画像などを使った｢トピック｣と呼ばれる話題と､それに対する｢コメント｣でコミュニケーションを実現します｡</p>
+  <strong>※youRoomは株式会社ソニックガーデンが運営するサービスです。http://youroom.in</strong>
+</div>

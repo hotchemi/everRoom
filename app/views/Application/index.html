@@ -1,0 +1,38 @@
+#{extends 'main.html' /}
+#{set title:'everRoom - youRoomのトピックを､Evernoteに｡' /}
+
+<div class="twelve columns">
+  #{if flash.success}
+    <p class="message-box ok">${flash.success}</p>
+  #{/if}
+  <div align="center">
+    <h2>youRoomのトピックを､Evernoteに｡</h2>
+    <img src="@{'/public/images/logo.png'}" width="70%" height="70%" alt="everRoom"/>
+  </div>
+  <div>
+    <h3 class="caption">What is everRoom?</h3>
+    <h5>everRoomは､youRoomのトピックを毎日Evernoteに保存してくれるサービスです。<br/>
+    白熱した議論や､覚えておきたいトピックをEvernoteにスクラップしましょう｡</h5>
+      <p>
+        配信時間は00:00〜12:00を予定しています。youRoomやEvernoteの障害が発生した場合はそれ以降になる可能性もあります。<br/>
+        everRoomは現在開発中のサービスです｡予告なくサービス停止､仕様変更する可能性があります｡<br/>
+        不具合､要望等が御座いましたらお気軽に<a href="https://twitter.com/hotchemi" target="blank">@hotchemi</a>か<a
+          href="https://www.youroom.in/r/32433" target="blank">youRoom</a>までご連絡ください。<br/>
+        <strong>※everRoomを利用するためにはyouRoomのアカウントが必要です｡</strong>
+      </p>
+  </div>
+  <div>
+    <h3 class="caption">Demo</h3>
+    <img src="@{'/public/images/screenshot.png'}" width="100%" height="100%" alt="スクリーンショット"/>
+    <h5>2ステップで､こんな風にあなたのyouRoomを毎日記録できます｡</h5>
+    <p>詳しい使い方は<a href="@{Application.about()}">こちら</a>｡</p>
+  </div>
+  <div>
+    <h3 class="caption">Topics</h3>
+    <ul>
+      <li><strong>2012/11/01</strong> <a href="http://hotchemi.hateblo.jp/entry/2012/11/01/002415" target="blank">開発者ブログ</a>を公開しました｡</li>
+      <li><strong>2012/11/01</strong> 開発に使用しているライブラリ､<a href="http://hotchemi.github.com/youroom4j/" target="blank">youRoom4J</a>を公開しました｡</li>
+      <li><strong>2012/11/01</strong> 公開しました｡</li>
+    </ul>
+  </div>
+</div>

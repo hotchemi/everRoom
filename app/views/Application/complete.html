@@ -1,0 +1,7 @@
+#{extends 'main.html' /}
+#{set title:'Setting Complete' /}
+
+#{if flash.success}
+<p class="message-box ok">${flash.success}</p>
+#{/if}
+<a href="@{Application.index}">戻る</a>

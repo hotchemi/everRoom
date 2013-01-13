@@ -1,0 +1,75 @@
+#{extends 'main.html' /}
+#{set title:'Setting' /}
+
+<div class="twelve columns" xmlns="http://www.w3.org/1999/html">
+  #{if flash.success}
+    <p class="message-box ok">${flash.success}</p>
+  #{/if}
+  <h2>Setting</h2>
+  <p>Evernoteへの配信設定を行います｡<br/>
+  ※正しい値が入力されていない場合は正常にEvernoteに保存されない場合があります｡</p>
+  <section class="tabs">
+    <ul>
+      <li class="active"><a href="#tab1">基本設定</a></li>
+      <li><a href="#tab2">配信停止</a></li>
+    </ul>
+    <div class="active" data-tab="tab1">
+      #{ifErrors}
+        <p class="message-box error">項目が不足しています！</p>
+      #{/ifErrors}
+
+      #{form @Application.complete()}
+      <h4 class="caption">Evernote投稿用メールアドレス [<a blank="target" href="https://www.evernote.com/Settings.action">？</a>]</h4>
+      <dl class="field row">
+        <dt style="margin-right:5px;" class="text five columns">
+          <input type="text" name="email" id="email" value="${email}" placeholder="ex) evernote.xxxx"/>
+        </dt>
+        <dt style="margin-top:5px;">
+          <h4>@m.evernote.com</h4>
+        </dt>
+      </dl>
+      <h4 class="caption">ノートブック</h4>
+      <dl class="field row">
+        <dt style="margin-right:5px;" class="text five columns">
+          <input type="text" name="note" id="note" value="${note}" placeholder="Notebook"/>
+        </dt>
+        <dt style="margin-top:15px;">
+          <h6>※予めEvernoteでノートを作っておく必要があります｡</h6>
+        </dt>
+      </dl>
+      <h4 class="caption">タグ</h4>
+      <dl class="field row">
+        <dt style="margin-right:5px;" class="text five columns">
+          <input type="text" name="tag" id="tag" value="${tag}" placeholder="Tag"/>
+        </dt>
+        <dt style="margin-top:15px;">
+          <h6>※予めEvernoteでタグを作っておく必要があります｡</h6>
+        </dt>
+      </dl>
+
+      <h4 class="caption">タイトル</h4>
+      <dl class="field row">
+        <dt style="margin-right:5px;" class="text five columns">
+          <input type="text" name="title" id="title" value="${subject}" placeholder="ex) [Date]のyouRoom履歴"/>
+        </dt>
+        <dt style="margin-top:15px;">
+          <h6>※[Date]でトピック取得日の日付が入ります｡</h6>
+        </dt>
+      </dl>
+
+      <p align="center">
+        <br/>
+        <input class="btn medium" type="submit" value="保存" />
+      </p>
+      #{/form}
+    </div>
+
+    <div data-tab="tab2">
+      <h4 class="caption">Evernoteへの配信を停止しますか？</h4>
+      <br/>
+      #{form @Application.delete()}
+      <input class="six columns primary btn" type="submit" value="配信を停止" />
+      #{/form}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,5 @@
+CompilerOracle: exclude jregex/Pretokenizer.next
+Listening for transport dt_socket at address: 53870
+00:39:01,243 INFO  ~ Starting /Users/katafuchi/Dropbox/Code/Java/everRoom
+00:39:02,037 WARN  ~ You're running Play! in DEV mode
+00:39:02,155 ERROR ~ Could not bind on port 9000
